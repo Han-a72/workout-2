@@ -16,6 +16,7 @@ router.get('/', authMiddleware, async (req, res) => {
 // Create a new exercise
 router.post('/', authMiddleware, async (req, res) => {
   const { name, sets, reps, weight } = req.body;
+  console.log(req.user)
 
   try {
     const exercise = new Exercise({
