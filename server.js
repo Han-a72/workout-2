@@ -12,7 +12,7 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors()); // Enable CORS
+app.use(cors('*')); // Enable CORS
 app.use(express.json()); // Parse incoming JSON data
 
 // Connect to database
